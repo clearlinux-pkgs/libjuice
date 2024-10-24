@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : libjuice
-Version  : 1.5.6
-Release  : 7
-URL      : https://github.com/paullouisageneau/libjuice/archive/v1.5.6/libjuice-1.5.6.tar.gz
-Source0  : https://github.com/paullouisageneau/libjuice/archive/v1.5.6/libjuice-1.5.6.tar.gz
+Version  : 1.5.7
+Release  : 8
+URL      : https://github.com/paullouisageneau/libjuice/archive/v1.5.7/libjuice-1.5.7.tar.gz
+Source0  : https://github.com/paullouisageneau/libjuice/archive/v1.5.7/libjuice-1.5.7.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MPL-2.0-no-copyleft-exception
@@ -61,15 +61,15 @@ license components for the libjuice package.
 
 
 %prep
-%setup -q -n libjuice-1.5.6
-cd %{_builddir}/libjuice-1.5.6
+%setup -q -n libjuice-1.5.7
+cd %{_builddir}/libjuice-1.5.7
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1729640319
+export SOURCE_DATE_EPOCH=1729781186
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -106,7 +106,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1729640319
+export SOURCE_DATE_EPOCH=1729781186
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libjuice
 cp %{_builddir}/libjuice-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/libjuice/9744cedce099f727b327cd9913a1fdc58a7f5599 || :
@@ -130,7 +130,7 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/libjuice.so.1.5.6
+/usr/lib64/libjuice.so.1.5.7
 
 %files license
 %defattr(0644,root,root,0755)
